@@ -1,0 +1,163 @@
+.gallery .art {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns of equal size */
+  /* border: 1px solid rgba(131, 131, 131, 0.492); */
+}
+
+.gallery .art>div {
+  background-color: black;
+}
+
+.gallery .art h4 {
+  font-size: 16px;
+}
+
+.gallery .art h1 {
+  font-size: 2.4vw;
+}
+
+.gallery .art * {
+  font-family: "Wix Madefor Text";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.art .artImage {
+  aspect-ratio: 1/1.33;
+  overflow: hidden;
+  /* border: 1px solid rgba(234, 234, 234, 0.7); */
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.art .artImage div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.art .artImage img {
+  height: 100%;
+}
+
+.gallery .artInfo h3 {
+  font-size: 16px;
+  text-align: left;
+}
+
+.gallery .artInfo span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gallery .artName,
+.gallery .artInfo {
+  padding: 0px 15px;
+  border-top: 1px solid rgba(234, 234, 234, 0.7);
+}
+
+.art .artInfo .stickToTop {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 70px;
+  position: sticky;
+  top: 0;
+  padding-block: 20px;
+}
+
+.art .artName .stickToTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  padding-block: 20px;
+}
+
+.arrow-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.2s;
+}
+
+.arrow-icon:hover {
+  transition: all ease 0.2s;
+  background-color: white !important;
+}
+
+.arrow-icon:hover img {
+  transition: all ease 0.2s;
+  transform: rotate(90deg);
+}
+
+.arrow-icon:hover img.whiteArrow {
+  opacity: 0;
+}
+
+.arrow-icon:hover img.blackArrow {}
+
+.arrow-icon .whiteArrow {
+  opacity: 1;
+}
+
+.arrow-icon.white {
+  background-color: black;
+}
+
+.arrow-icon img {
+  pointer-events: none;
+  transition: all ease 0.2s;
+  width: 30px;
+  position: absolute;
+}
+
+@media (max-width: 750px) {
+
+  .gallery .art h1 {
+    text-align: left;
+    font-size: 3.5vw;
+  }
+
+  .art .artImage {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    aspect-ratio: 1/1.5;
+  }
+
+  .art .artImage>div {
+    overflow: hidden;
+  }
+
+  .gallery .stickToTop {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .gallery .artInfo h3 {
+    font-size: 14px;
+    text-align: left;
+  }
+
+}

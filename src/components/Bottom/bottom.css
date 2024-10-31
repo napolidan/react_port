@@ -1,0 +1,235 @@
+/* BOTTOM */
+
+.bottom {
+  border-top: 1px solid #C4C4C4;
+  position: relative;
+  height: 100%;
+  background-color: black;
+}
+
+
+.bottomTitle {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  transform: translateY(-1vw);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16vw;
+  letter-spacing: -1vw;
+  z-index: 500;
+}
+
+
+.bottomLayout {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomLayout .column {
+  flex: 1;
+  display: flex;
+  /* Ensure it behaves well with flex */
+  flex-direction: column;
+  /* Stack elements vertically */
+}
+
+.bottom .left {
+  /* background-color: orange; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.bottom .left span {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  width: 100%;
+  /* background-color: blue; */
+}
+
+.bottom .left span a {
+  color: white;
+  text-align: left;
+  padding: 8px 0px 10px 10px;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.7);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.bottom.bottom.works-page .left span a:visited{
+  color: black !important;
+}
+
+.bottom .right {
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bottom .right span {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  width: 100%;
+  /* background-color: blue; */
+}
+
+.bottom .right span h3 {
+  text-align: right;
+  padding: 8px 10px 10px 0px;
+  border-block: 1px solid rgba(234, 234, 234, 0.7);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.bottom .right span span {
+  padding: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(234, 234, 234, 0.7);
+}
+
+.bottom .middle {
+  height: clamp(750px, 30vw, 900px);
+  /* Adjust height based on viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bottom .middle a {
+  position: relative;
+  z-index: 750;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: fit-content;
+  padding: 0;
+  width: 204px;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  transition-property: all, visibility;
+  transition-duration: 0.2s, 0s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
+
+.bottom .middle a h1 {
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  transition-property: all, visibility;
+  transition-duration: 0.2s, 0s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
+
+.bottom .middle a:hover {
+  background-color: black;
+  border: 1px solid white;
+  transition-property: all, visibility;
+  transition-duration: 0.2s, 0s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
+
+.bottom .middle a:hover h1 {
+  color: white;
+  transition-property: all, visibility;
+  transition-duration: 0.2s, 0s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
+
+
+@media (max-width: 750px) {
+
+  /* Estilos para pantallas más grandes que 1000px */
+  .bottom .middle {
+    height: clamp(600px, 130vw, 950px);
+    width: 0 !important;
+    flex: 0;
+  }
+
+  .bottom .right * {
+    border: 0 !important;
+  }
+
+  .bottom .right span h3 {
+    text-align: left;
+    padding: 8px 0px 10px 10px;
+  }
+
+  .bottom .lines .disappear {
+    display: none;
+  }
+
+  .bottomLayout * {
+    font-size: 14px !important;
+  }
+
+  .lines span:nth-child(2) {
+    border-inline: 1px solid rgba(234, 234, 234, 0.7);
+  }
+}
+
+/* CORREGIR ACA */
+
+.bottom.works-page{
+  background-color: white;
+}
+
+.bottom.works-page .bottomTitle {
+  color: black;
+}
+
+
+.bottom.works-page .bottomLayout {
+  color: black !important;
+}
+
+.bottom.works-page .left span a {
+  border-bottom: 1px solid rgba(162, 162, 162, 0.7);
+}
+
+.bottom.works-page .right span span {
+  border-top: 1px solid rgba(162, 162, 162, 0.7);
+}
+
+
+.bottom.works-page .middle a {
+  background-color: black;
+}
+
+.bottom.works-page .middle a h1 {
+  color: white;
+}
+
+.bottom.works-page .middle a:hover {
+  background-color: white !important;
+  border: 1px solid black;
+}
+
+.bottom.works-page .middle a:hover h1 {
+  color: black;
+}
+
+.bottom.works-page .right span h3 {
+  border-block: 1px solid rgba(162, 162, 162, 0.7);
+}
+
+.bottom.works-page .lines span:nth-child(2) {
+  border-inline: 1px solid rgba(162, 162, 162, 0.7);
+}
