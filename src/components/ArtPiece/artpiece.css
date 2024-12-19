@@ -29,6 +29,7 @@
 .art .artImage {
   aspect-ratio: 1/1.33;
   overflow: hidden;
+  z-index: 1;
   /* border: 1px solid rgba(234, 234, 234, 0.7); */
   border-top: 0px;
   border-bottom: 0px;
@@ -49,11 +50,15 @@
   text-align: left;
 }
 
+.artInfo{
+  z-index: 2;
+}
+
 .gallery .artInfo span {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(2px, 1vw, 24px);
 }
 
 .gallery .artName,
@@ -84,8 +89,8 @@
 
 .arrow-icon {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: clamp(25px, 5vw, 60px);
+  height: clamp(25px, 5vw, 60px);
   padding: 6px;
   background-color: black;
   border: 1px solid white;
@@ -123,7 +128,7 @@
 .arrow-icon img {
   pointer-events: none;
   transition: all ease 0.2s;
-  width: 30px;
+  width: clamp(10px, 4vw, 30px);
   position: absolute;
 }
 
@@ -131,7 +136,7 @@
 
   .gallery .art h1 {
     text-align: left;
-    font-size: 3.5vw;
+    font-size: clamp(6px, 3.5vw, 16px);
   }
 
   .art .artImage {
@@ -157,6 +162,7 @@
 
   .gallery .artInfo h3 {
     font-size: 14px;
+    font-size: clamp(6px, 2vw, 14px);
     text-align: left;
   }
 

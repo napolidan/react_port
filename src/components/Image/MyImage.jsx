@@ -17,7 +17,7 @@ const MyImage = ({src, alt}) => {
 
   return (
     <img
-      src={error ? "https://placehold.co/600x400?text=Image\n+not+Found" : loading ? "https://placehold.co/600x400?text=loading..." : src}
+      src={error ? "load.png" : loading ? "load.png" : src}
       alt={error ? 'Error' : alt}
       onLoad={handleLoad}
       onError={handleError}

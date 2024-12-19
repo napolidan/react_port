@@ -11,7 +11,9 @@ import MyImage from './components/Image/MyImage.jsx';
 import WorkDetail from './components/WorkDetail/WorkDetail.jsx';  // Import WorkDetail component
 import ScrollToTop from './components/ScrollToTop.jsx'; // Import the ScrollToTop component
 import './App.css';
-
+import artPieces from './artData/artPieces.js';  // Import the centralized data
+import transition from './transition.jsx';
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
@@ -29,13 +31,15 @@ function AppContent() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<><Hero /><Gallery /></>} />
-        <Route path="/works" element={<Works />} />
-        {/* Dynamic route for each artwork */}
-        <Route path="/works/:title" element={<WorkDetail />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <AnimatePresence mode='wait'>
+        <Routes>
+          <Route path="/" element={<><Hero /><Gallery /></>} />
+          <Route path="/works" element={<Works />} />
+          {/* Dynamic route for each artwork */}
+          <Route path="/works/:title" element={<WorkDetail />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </AnimatePresence>
       <Bottom altColor={altColor} />
     </>
   );

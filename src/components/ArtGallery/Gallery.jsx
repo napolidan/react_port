@@ -2,6 +2,7 @@
 import React from 'react';
 import ArtPiece from '../ArtPiece/ArtPiece.jsx';
 import artPieces from '../../artData/artPieces.js';  // Import the centralized data
+import transition from '../../transition.jsx';
 
 const Gallery = () => {
 

@@ -20,6 +20,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 16vw;
+  font-size: clamp(10vw, 16vw, 180px);
   letter-spacing: -1vw;
   z-index: 500;
 }
@@ -65,7 +66,7 @@
   font-size: 16px;
 }
 
-.bottom.bottom.works-page .left span a:visited{
+.bottom.bottom.works-page .left span a:visited {
   color: black !important;
 }
 
@@ -98,6 +99,22 @@
   border-top: 1px solid rgba(234, 234, 234, 0.7);
 }
 
+.bottom .right span a {
+  text-align: right;
+  padding: 8px 10px 10px 0px;
+}
+
+.bottom .right span div {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: right;
+}
+
+.bottom .right span img {
+  height: 1.8rem;
+}
+
 .bottom .middle {
   height: clamp(750px, 30vw, 900px);
   /* Adjust height based on viewport width */
@@ -116,7 +133,7 @@
   background-color: white;
   width: fit-content;
   padding: 0;
-  width: 204px;
+  width: clamp(120px, 15vw, 204px);
   border-radius: 100%;
   aspect-ratio: 1/1;
   transition-property: all, visibility;
@@ -172,6 +189,15 @@
     padding: 8px 0px 10px 10px;
   }
 
+  .bottom .right span div {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .bottom .right span img {
+    height: 1.4rem;
+  }
+
   .bottom .lines .disappear {
     display: none;
   }
@@ -187,7 +213,7 @@
 
 /* CORREGIR ACA */
 
-.bottom.works-page{
+.bottom.works-page {
   background-color: white;
 }
 

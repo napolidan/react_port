@@ -71,6 +71,7 @@
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
+    color: black !important;
 }
 
 .about h5 {

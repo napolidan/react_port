@@ -1,7 +1,7 @@
 // src/Header/Header.jsx
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
-import insta from '/insta.png';
+import insta from '/insta_w.png';
 import hamburguer from '/hamburguer.png';
 import cross from '/cross.png';
 import './header.css';
@@ -74,16 +74,31 @@ const Header = () => {
                     <ul className='index_list'>
                         <li><Link to="/works">work</Link></li>
                         <li><Link to="/about">about</Link></li>
-                        <li><Link to="/about">contact</Link></li>
+                        <li>
+                            <Link
+                                to="/about"
+                                onClick={(e) => {
+                                    e.preventDefault(); // Prevenir el comportamiento predeterminado si queremos manejar el scroll manualmente
+                                    navigate('/about'); // Navega a la página
+                                    setTimeout(() => {
+                                        const phoneSection = document.getElementById('hello');
+                                        phoneSection?.scrollIntoView({ behavior: 'smooth' });
+                                    }, 100); // Ajusta el tiempo si es necesario
+                                }}
+                            >
+                                contact
+                            </Link>
+                        </li>
+
                     </ul>
                     <img onClick={changeMenuDisplay} className='hamburguer' src={hamburguer} alt="" />
                 </span>
                 <span>
                     <ul>
                         <li className='instaContainer'>
-                            <a href="https://www.instagram.com/yourprofile">
+                            <a href="https://www.instagram.com/napzzzart" target="_blank" rel="noopener noreferrer">
                                 <img className='insta' src={insta} alt="Instagram logo" />
-                                Instagram
+                                <h3>Instagram</h3>
                             </a>
                         </li>
                     </ul>
@@ -97,7 +112,19 @@ const Header = () => {
                     <span>
                         <Link className='wixFont' to="/works" onClick={() => handleClick('/works')}>work</Link>
                         <Link className='wixFont' to="/about" onClick={() => handleClick('/about')}>about</Link>
-                        <Link className='wixFont' to="/contact" onClick={() => handleClick('/contact')}>contact</Link>
+                        <Link
+                            className='wixFont'
+                            to="/about"
+                            onClick={() => {
+                                handleClick('/about');
+                                setTimeout(() => {
+                                    const phoneSection = document.getElementById('hello');
+                                    phoneSection?.scrollIntoView({ behavior: 'smooth' });
+                                }, 100); // Ajusta el tiempo según la velocidad de carga de tu página
+                            }}
+                        >
+                            contact
+                        </Link>
                     </span>
                 </span>
             </span>

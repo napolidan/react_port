@@ -21,7 +21,7 @@ const Hero = () => {
           <h2 className='occupation wixFont'>
             DIGITAL ARTIST<br />
             AND WEB DEVELOPER<br />
-            BASED IN PANAMA
+            BASED IN THE NETHERLANDS
           </h2>
         </span>
         <span>

@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   height: fit-content;
-  z-index: 1000;
+  z-index: 1001;
   border-bottom: 1px solid rgba(234, 234, 234, 0.7);
   transition: top 0.8s ease;
   /* Ensure smooth transition for top */
@@ -22,7 +22,7 @@ header span * {
   font-family: "Wix Madefor Text";
   font-optical-sizing: auto;
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(8px, 4vw, 16px);
   font-style: normal;
 }
 
@@ -74,7 +74,7 @@ header span ul {
 }
 
 .hamburguer {
-  height: 100%;
+  height: clamp(55px, 35vw, 63px);
   padding: 20px;
   max-width: 100px;
   cursor: pointer;
@@ -203,6 +203,10 @@ header .insta {
 
   .menu a {
     font-size: 8vw;
+  }
+
+  .instaContainer h3{
+    display: none;
   }
 }
 
